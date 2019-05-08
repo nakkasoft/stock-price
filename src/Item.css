@@ -1,0 +1,82 @@
+.Item{
+    background-color:white;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    margin-bottom:0px;
+    text-overflow: ellipsis;
+    padding:0 20px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133,0.22);
+}
+
+.Item .Item_Title{
+    display: flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    height: 45px;
+}
+
+.Item:hover {
+    background: #bde7ee;
+}
+
+/* 마우스가 있을때만 .Item_Remove 보이기 */
+.Item:hover .Item_Remove {
+    opacity: 1;
+}
+
+.Item_Remove {
+    color: #e64980;
+    opacity: 0;
+}
+
+.Item_Remove:hover {
+    cursor: pointer;
+}
+
+.Item_Column{
+    width:30%;
+    box-sizing:border-box;
+    text-overflow: ellipsis;
+}
+
+.Item_Column:last-child{
+    padding:10px 0;
+    width:60%;
+}
+
+.Item h1{
+    font-size:20px;
+    text-align: left;
+}
+
+.Item .Item_Content{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.Item .Item_Yesterday{
+    font-size:7px;
+    margin-top:7px;
+}
+
+.Item .Item_Price{
+    margin-bottom:10px;
+    margin-left:5px;
+}
+
+.Item .Item_DiffPercent{
+    margin-bottom:10px;
+    margin-left:5px;
+}
+
+@media screen and (min-width:320px) and (max-width:667px){
+    .Item{
+        width:100%;
+    }
+    .Item_Title{
+        width:100%;
+    }
+}
